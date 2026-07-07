@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — 3D Kastl Studio</title>
+<meta name="description" content="Kontaktujte 3D Kastl Studio — popište svůj případ a odpovíme do 24 hodin.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/VSUDE_logo_13.svg" alt="3D Kastl Studio">
+      <div class="brand-text">
+        <span class="brand-3d-kastl">3D KASTL</span>
+        <div class="divider"></div>
+        <span class="studio">STUDIO</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="o-nas.html">Profil</a>
+      <a href="b2b-vyroba.html">B2B &amp; Výroba</a>
+      <a href="historie-kultura.html">Historie &amp; Kultura</a>
+      <a href="domacnost-hobby.html">Domácnost &amp; Hobby</a>
+      <a href="cenotvorba.html">Cenotvorba</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+  </div>
+  <div class="laser-rail"><div class="dot"></div></div>
+</header>
+
+<main>
+
+  <section class="hero hero-photo" style="background-image: url('assets/KONTAKT_hero_06.jpg');">
+    <div class="wrap">
+      <p class="eyebrow">KONTAKT</p>
+      <h1 class="page-title">Popište nám svůj případ.</h1>
+      <p class="page-lead">Ať jde o zastavenou linku, muzejní exponát nebo originální nápad — napište nám a ozveme se zpět do 24 hodin.</p>    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; padding-left: 40px; align-items: start;">
+
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <label for="name">Jméno a příjmení</label>
+          <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+        </div>
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="jan.novak@firma.cz" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Popis případu</label>
+          <textarea id="message" name="message" rows="6" placeholder="Stručně popište díl, exponát nebo nápad, který potřebujete vyřešit…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+      </form>
+
+      <div class="contact-info">
+        <div class="item">
+          <div class="label">E-MAIL</div>
+          <div class="value"><a href="mailto:3dkastlstudio@gmail.com">3dkastlstudio@gmail.com</a></div>
+        </div>
+        <div class="item">
+          <div class="label">TELEFON</div>
+          <div class="value"><a href="tel:+420705903725">+420 705 903 725</a></div>
+        </div>
+        <div class="item">
+          <div class="label">DOBA ODEZVY</div>
+          <div class="value">do 24 hodin</div>
+        </div>
+        <div class="item">
+          <div class="label">OBLASTI PŮSOBENÍ</div>
+          <div class="value" style="font-size:14px; font-weight:400; color: var(--c-gray);">
+            B2B &amp; Výroba · Historie &amp; Kultura · Domácnost &amp; Hobby
+          </div>
+        </div>
+        <div class="item">
+          <div class="label">SOCIÁLNÍ SÍTĚ</div>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/3dkastlstudio/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/3dkastlstudio/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 4h-2.5A3.5 3.5 0 0 0 9 7.5V10H6.5v3.5H9V21h3.5v-7.5H15l1-3.5h-3.5V7.5c0-.55.45-1 1-1H15V4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="label">FIREMNÍ ÚDAJE</div>
+          <div class="value" style="font-size:14px; font-weight:600;">
+            <a href="pravni-info.html" style="color: var(--c-ink); border-bottom: 1px solid var(--c-blue);">Právní informace (IČO, sídlo, GDPR)</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block tight" style="border-top: 0.5px solid var(--c-line);">
+    <div class="wrap" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; padding-left: 40px; align-items: center;">
+      <div>
+        <p class="eyebrow" style="padding-left:0;">DIGITÁLNÍ VIZITKA</p>
+        <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0 0 10px;">
+          Naskenujte a uložte si kontakt rovnou do telefonu
+        </h2>
+        <p style="font-size: 14.5px; color: var(--c-gray); line-height: 1.7; max-width: 440px; margin: 0 0 20px;">
+          QR kód otevře vizitku 3D Kastl Studio, kterou si telefon nabídne rovnou uložit mezi kontakty —
+          žádná aplikace ani registrace není potřeba.
+        </p>
+        <a href="assets/3Dkastl-studio.vcf" download class="btn btn-secondary">Stáhnout vizitku (.vcf)</a>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <img src="assets/KONTAKT_qrVizitka_14.png" alt="QR kód pro stažení digitální vizitky 3D Kastl Studio" style="width:160px; height:160px; border: 0.5px solid var(--c-line); border-radius: var(--radius); padding: 12px; background:var(--c-paper);">      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-legal">
+      Jan Martin Kasl &middot; 3D Kastl Studio &middot; Sídlo: <span class="placeholder">doplnit</span> &middot;
+      IČO: <span class="placeholder">doplnit</span> &middot; DIČ: <span class="placeholder">doplnit, je-li plátcem DPH</span> &middot;
+      Zapsáno v živnostenském rejstříku vedeném <span class="placeholder">doplnit příslušný úřad</span>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 3D Kastl Studio</span>
+      <div class="footer-links">
+        <a href="o-nas.html">Profil</a>
+        <a href="b2b-vyroba.html">B2B &amp; Výroba</a>
+        <a href="historie-kultura.html">Historie &amp; Kultura</a>
+        <a href="domacnost-hobby.html">Domácnost &amp; Hobby</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="pravni-info.html">Právní informace</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
