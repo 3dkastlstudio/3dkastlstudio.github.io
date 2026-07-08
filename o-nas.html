@@ -13,7 +13,7 @@
     <a href="index.html" class="brand">
       <img src="assets/VSUDE_logo_13.svg" alt="3D Kastl Studio">
       <div class="brand-text">
-        <span class="brand-3d-kastl">3D KASTL</span>
+        <span class="3D kastl">3D KASTL</span>
         <div class="divider"></div>
         <span class="studio">STUDIO</span>
       </div>
@@ -27,6 +27,9 @@
       <a href="cenotvorba.html">Cenotvorba</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="laser-rail"><div class="dot"></div></div>
 </header>
@@ -41,7 +44,7 @@
   </section>
 
   <section class="block tight">
-    <div class="wrap" style="max-width: 760px; padding-left: 40px;">
+    <div class="wrap" style="max-width: 800px; padding-left: 40px;">
       <div style="display: flex; align-items: flex-start; gap: 32px;">
         <div style="flex: 1; min-width: 0;">
           <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0 0 1em;">
@@ -49,59 +52,42 @@
             i památkovým institucím přinesl služby, které na lokálním trhu chyběly. Moje práce stojí
             na unikátním propojení technické preciznosti a hlubokého vztahu k historii.
           </p>
-        <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify;">
-        Mám za sebou více než 6 let praxe jako inženýr kvality v automotive (Tier 2).
-        Díky tomu vím, co obnáší nekompromisní průmyslová kvalita, procesní disciplína a rychlost,
-        která je potřeba, když hrozí zastavení výroby. Zároveň jsem vystudoval ochranu kulturního dědictví
-        na Filozofické fakultě UHK, což mi dalo cit pro detail a odborné zázemí pro práci s historickými artefakty.
-      </p>
-      <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify;">
-        Díky těmto zkušenostem pro vás zajišťuji kompletní proces od nápadu až po hotový produkt:
-      </p>
-      <ul style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; padding-left: 1.4em; margin: 0 0 1.2em; text-align: justify;">
-        <li style="margin-bottom: 0.8em;">
-          <strong>Průmyslové 3D skenování &amp; reverzní inženýrství:</strong>
-          Rychlé řešení krizových situací. Pokud se vám rozbije důležitý komponent,
-          dokážu ho přesně naskenovat, digitálně opravit a připravit pro výrobu nového kusu.
-        </li>
-        <li style="margin-bottom: 0.8em;">
-          <strong>3D modelování a CAD design:</strong>
-          Pracuji s pokročilými nástroji na Windows i Androidu. Vaše představy dokážu precizně vymodelovat,
-          ať už jde o technický díl nebo organický tvar.
-        </li>
-        <li style="margin-bottom: 0.8em;">
-          <strong>Aditivní výroba (FDM tisk) z odolných materiálů:</strong>
-          Specializuji se na tisk z vysoce odolných průmyslových materiálů,
-          jako jsou PCTG, karbonem plněný polypropylen (PP-CF) nebo Nylon.
-          Výsledné díly snesou tvrdé mechanické i chemické namáhání.
-        </li>
-        <li>
-          <strong>Digitalizace a muzejní repliky:</strong>
-          Dokážu s maximálním respektem k originálu digitalizovat historické předměty
-          a vytvářet věrné repliky pro muzea a expozice.
-        </li>
-      </ul>
-      <h3 style="font-size: 17px; color: var(--c-ink); margin: 1.6em 0 0.6em;">Proč spolupracovat se 3D Kastl Studio?</h3>
-      <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify;">
-        Nekupujete si anonymní službu, jednáte přímo se mnou.
-        Jsem člověk, v němž se potkává preciznost automotive inženýra s odborným pohledem historika.
-        Rozumím průmyslovým standardům a materiálům stejně dobře
-        jako metodice a etice zacházení se sbírkovými předměty.
-      </p>
-      <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify;">
-        Ať už potřebujete mluvit technickým jazykem pro záchranu výrobní linky,
-        nebo hledáte partnera pro šetrnou digitalizaci historického fondu,
-        jsem tu pro vás. S absolutní pečlivostí k oběma světům.
-      </p>
-      <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; margin-top: 1.4em; text-align: justify;">
-        <em>Bc. Jan M. Kasl</em>
-      </p>
+          <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0 0 1em;">
+            Mám za sebou více než 6 let praxe jako inženýr kvality v automotive (Tier 2).
+            Díky tomu vím, co obnáší nekompromisní průmyslová kvalita, procesní disciplína a rychlost,
+            která je potřeba, když hrozí zastavení výroby. Zároveň jsem vystudoval ochranu kulturního dědictví
+            na Filozofické fakultě UHK, což mi dalo cit pro detail a odborné zázemí pro práci s historickými artefakty.
+          </p>
+          <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0 0 1em;">
+            Díky těmto zkušenostem pro vás zajišťuji kompletní proces od nápadu až po hotový produkt:
+          </p>
+          <ul style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; padding-left: 1.4em; margin: 0 0 1.2em; text-align: justify;">
+            <li style="margin-bottom: 0.8em;"><strong>Průmyslové 3D skenování &amp; reverzní inženýrství:</strong> Rychlé řešení krizových situací. Pokud se vám rozbije důležitý komponent, dokážu ho přesně naskenovat, digitálně opravit a připravit pro výrobu nového kusu.</li>
+            <li style="margin-bottom: 0.8em;"><strong>3D modelování a CAD design:</strong> Pracuji s pokročilými nástroji na Windows i Androidu. Vaše představy dokážu precizně vymodelovat, ať už jde o technický díl nebo organický tvar.</li>
+            <li style="margin-bottom: 0.8em;"><strong>Aditivní výroba (FDM tisk) z odolných materiálů:</strong> Specializuji se na tisk z vysoce odolných průmyslových materiálů, jako jsou PCTG, karbonem plněný polypropylen (PP-CF) nebo Nylon. Výsledné díly snesou tvrdé mechanické i chemické namáhání.</li>
+            <li><strong>Digitalizace a muzejní repliky:</strong> Dokážu s maximálním respektem k originálu digitalizovat historické předměty a vytvářet věrné repliky pro muzea a expozice.</li>
+          </ul>
+          <h3 style="font-size: 17px; color: var(--c-ink); margin: 1.6em 0 0.6em;">Proč spolupracovat se 3D Kastl Studio?</h3>
+          <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0 0 1em;">
+            Nekupujete si anonymní službu, jednáte přímo se mnou.
+            Jsem člověk, v němž se potkává preciznost automotive inženýra s odborným pohledem historika.
+            Rozumím průmyslovým standardům a materiálům stejně dobře jako metodice a etice zacházení se sbírkovými předměty.
+          </p>
+          <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0 0 1.4em;">
+            Ať už potřebujete mluvit technickým jazykem pro záchranu výrobní linky,
+            nebo hledáte partnera pro šetrnou digitalizaci historického fondu,
+            jsem tu pro vás. S absolutní pečlivostí k oběma světům.
+          </p>
+          <p style="font-size: 16px; color: var(--c-ink-soft); line-height: 1.8; text-align: justify; margin: 0;">
+            <em>Bc. Jan M. Kasl</em>
+          </p>
         </div>
-        <div style="flex-shrink: 0;">
+        <div style="flex-shrink: 0; padding-top: 4px;">
           <img src="assets/PROFIL_foto_ctverec.jpg"
                alt="Bc. Jan M. Kasl — zakladatel 3D Kastl Studio"
                width="110" height="110"
-               style="display: block; border-radius: 4px; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-user-select: none; draggable='false';">
+               style="display: block; border-radius: 4px; pointer-events: none; user-select: none; -webkit-user-drag: none;"
+               draggable="false">
         </div>
       </div>
     </div>
@@ -199,5 +185,31 @@
   </div>
 </footer>
 
+<script>
+  // Hamburger menu
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Zavřít po kliknutí na odkaz
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Zavřít při resize nad 680px
+    window.addEventListener('resize', function(){
+      if (window.innerWidth > 680) {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

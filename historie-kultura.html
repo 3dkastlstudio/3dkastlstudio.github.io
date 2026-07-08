@@ -13,7 +13,7 @@
     <a href="index.html" class="brand">
       <img src="assets/VSUDE_logo_13.svg" alt="3D Kastl Studio">
       <div class="brand-text">
-        <span class="brand-3d-kastl">3D KASTL</span>
+        <span class="3D kastl">3D KASTL</span>
         <div class="divider"></div>
         <span class="studio">STUDIO</span>
       </div>
@@ -27,6 +27,9 @@
       <a href="cenotvorba.html">Cenotvorba</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="laser-rail"><div class="dot"></div></div>
 </header>
@@ -79,9 +82,7 @@
       <div class="section-head">
         <p class="eyebrow">POSTUP</p>
         <h2>Od originálu k bezpečné replice</h2>
-        <p>Digitalizace přináší revoluci do způsobu, jakým kulturní dědictví chráníme, studujeme i prezentujeme.
-        Spojením šetrného 3D skenování a precizního 3D tisku pomáhám muzeím, galeriím a archivům otevírat nové možnosti,
-        jak přiblížit historii veřejnosti bez rizika poškození originálů.</p>
+        <p style="text-align: justify;">Digitalizace přináší revoluci do způsobu, jakým kulturní dědictví chráníme, studujeme i prezentujeme. Spojením šetrného 3D skenování a precizního 3D tisku pomáhám muzeím, galeriím a archivům otevírat nové možnosti, jak přiblížit historii veřejnosti bez rizika poškození originálů.</p>
       </div>
       <div style="max-width: 800px;">
         <h3 style="font-size: 17px; color: var(--c-ink); margin: 0 0 0.8em;">Co všechno pro vás mohu udělat?</h3>
@@ -94,95 +95,37 @@
         </ul>
         <h3 style="font-size: 17px; color: var(--c-ink); margin: 0 0 0.8em;">Stručný postup</h3>
         <ol style="font-size: 15.5px; color: var(--c-ink-soft); line-height: 1.8; padding-left: 1.4em; margin: 0 0 1.6em; text-align: justify;">
-          <li style="margin-bottom: 0.7em;"><strong>Šetrný sken:</strong> Nemůže-li exponát k nám, předmět nasnímám přímo u vás pomocí profesionálního skeneru (infračervené světlo / modrý laser), který je k historickým povrchům maximálně šetrný (maticový sprej nemusí být nutný).</li>
+          <li style="margin-bottom: 0.7em;"><strong>Šetrný sken:</strong> Nemůže-li exponát k nám, předmět nasnímám přímo u vás pomocí profesionálního skeneru (infračervené světlo / modrý laser), který je k historickým povrchům maximálně šetrný.</li>
           <li style="margin-bottom: 0.7em;"><strong>Digitální zpracování:</strong> Sken vyčistím, optimalizuji pro archivaci, případně digitálně zrekonstruuji chybějící části. Výstupem pro vás může být čistě digitální model (OBJ, STL).</li>
           <li><strong>Precizní tisk:</strong> Pokud je cílem replika, vytisknu ji z materiálu vhodného i pro případnou postprodukci (patinování, malbu), aby výsledný vjem dokonale odpovídal originálu.</li>
         </ol>
       </div>
 
-      <div class="process">
-        <div class="step">
-          <div class="num">01</div>
-          <h4>Konzultace</h4>
-          <p>Domluvíme se na rozsahu, termínu a způsobu manipulace s originálem.</p>
-        </div>
-        <div class="step">
-          <div class="num">02</div>
-          <h4>Šetrný sken</h4>
-          <p>Bezkontaktní 3D skenování zachytí i jemné detaily povrchu a tvaru.</p>
-        </div>
-        <div class="step">
-          <div class="num">03</div>
-          <h4>Úprava modelu</h4>
-          <p>Model případně přizpůsobíme účelu — odolnosti, velikosti nebo zjednodušení.</p>
-        </div>
-        <div class="step">
-          <div class="num">04</div>
-          <h4>Tisk repliky</h4>
-          <p>Vytiskneme v materiálu odolném na časté zacházení a předání veřejnosti.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block" id="cenik">
-    <div class="wrap">
-      <details class="accordion">
-        <summary class="accordion-trigger">
-          <span>Ceník — Historie &amp; Kultura</span>
-          <span class="acc-icon"></span>
-        </summary>
+      <details class="accordion" id="cenik">
+        <summary class="accordion-trigger"><span>Ceník — Historie &amp; Kultura</span><span class="acc-icon"></span></summary>
         <div class="accordion-body">
-
-          <table class="price-table">
-            <caption>Skenování</caption>
-            <thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead>
-            <tbody>
-              <tr><td>3D skenování ve studiu</td><td class="price-val">880 Kč / hod</td><td class="price-note">Šetrná manipulace v rukavicích, bezpečné upevnění.</td></tr>
-              <tr><td>3D skenování v depozitáři</td><td class="price-val">1 460 Kč / hod</td><td class="price-note">Digitalizace přímo v instituci — bez nutnosti převozu.</td></tr>
-            </tbody>
-          </table>
-
-          <table class="price-table">
-            <caption>CAD / Digitální restaurování</caption>
-            <thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead>
-            <tbody>
-              <tr><td>Digitální restaurování a CAD</td><td class="price-val">860 Kč / hod</td><td class="price-note">Retuše, domodelování chybějících částí, výstup OBJ / STL.</td></tr>
-            </tbody>
-          </table>
-
-          <table class="price-table">
-            <caption>3D tisk — expoziční a haptické modely</caption>
-            <thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead>
-            <tbody>
-              <tr><td>Tisk expozičních / haptických modelů</td><td class="price-val">80 Kč / hod</td><td class="price-note">Důraz na detail povrchu a finální vzhled repliky.</td></tr>
-            </tbody>
-          </table>
-
-          <table class="price-table">
-            <caption>Materiál</caption>
-            <thead><tr><th>Materiál</th><th>Cena / gram</th><th>Nákupní cena / kg</th></tr></thead>
-            <tbody>
-              <tr><td>PETG (standardní)</td><td class="price-val">1,20 Kč / g</td><td class="price-note">479 Kč / kg (Spectrum)</td></tr>
-              <tr><td>PETG — imitace dřeva / kovu</td><td class="price-val">1,80 Kč / g</td><td class="price-note">~720 Kč / kg (speciální estetické)</td></tr>
-              <tr><td>PCTG (odolný, haptický)</td><td class="price-val">1,63 Kč / g</td><td class="price-note">650 Kč / kg</td></tr>
-            </tbody>
-          </table>
-
-          <table class="price-table">
-            <caption>Doprava / Výjezdní paušál</caption>
-            <thead><tr><th>Pásmo</th><th>Cena</th><th>Oblast</th></tr></thead>
-            <tbody>
-              <tr><td>Lokální (do 15 km)</td><td class="price-val">416 Kč</td><td class="price-note">Klášterec n. O., Kadaň.</td></tr>
-              <tr><td>Okresní (do 35 km)</td><td class="price-val">930 Kč</td><td class="price-note">Chomutov, Ostrov a okolí.</td></tr>
-              <tr><td>Regionální (do 65 km)</td><td class="price-val">1 760 Kč</td><td class="price-note">Regionální muzea — KV, Most, Žatec.</td></tr>
-              <tr><td>Vzdálené výjezdy (&gt;65 km)</td><td class="price-val">16 Kč / km</td><td class="price-note">Celková trasa tam i zpět.</td></tr>
-            </tbody>
-          </table>
-
-          <p class="price-footnote">Minimální fakturace 2 500 Kč / zakázka. Ceny jsou orientační — přesnou nabídku zašlu po konzultaci. <a href="cenotvorba.html" style="color: var(--c-blue);">Jak vzniká cena?</a></p>
-
+          <table class="price-table"><caption>Skenování</caption><thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead><tbody>
+            <tr><td>3D skenování ve studiu</td><td class="price-val">880 Kč / hod</td><td class="price-note">Šetrná manipulace v rukavicích, bezpečné upevnění.</td></tr>
+            <tr><td>3D skenování v depozitáři</td><td class="price-val">1 460 Kč / hod</td><td class="price-note">Digitalizace přímo v instituci — bez nutnosti převozu.</td></tr>
+          </tbody></table>
+          <table class="price-table"><caption>CAD / Digitální restaurování</caption><thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead><tbody>
+            <tr><td>Digitální restaurování a CAD</td><td class="price-val">860 Kč / hod</td><td class="price-note">Retuše, domodelování chybějících částí, výstup OBJ / STL.</td></tr>
+          </tbody></table>
+          <table class="price-table"><caption>3D tisk — expoziční a haptické modely</caption><thead><tr><th>Služba</th><th>Cena</th><th>Poznámka</th></tr></thead><tbody>
+            <tr><td>Tisk expozičních / haptických modelů</td><td class="price-val">80 Kč / hod</td><td class="price-note">Důraz na detail povrchu a finální vzhled repliky.</td></tr>
+          </tbody></table>
+          <table class="price-table"><caption>Materiál — cena za gram</caption><thead><tr><th>Materiál</th><th>Cena / gram</th><th>Nákupní cena / kg</th></tr></thead><tbody>
+            <tr><td>PETG (standardní)</td><td class="price-val">1,20 Kč / g</td><td class="price-note">479 Kč / kg (Spectrum)</td></tr>
+            <tr><td>PETG — imitace dřeva / kovu</td><td class="price-val">1,80 Kč / g</td><td class="price-note">~720 Kč / kg (speciální estetické)</td></tr>
+            <tr><td>PCTG (odolný, haptický)</td><td class="price-val">1,63 Kč / g</td><td class="price-note">650 Kč / kg</td></tr>
+          </tbody></table>
+          <table class="price-table"><caption>Doprava / Výjezdní paušál</caption><thead><tr><th>Pásmo</th><th>Cena</th><th>Oblast</th></tr></thead><tbody>
+            <tr><td>Lokální (do 15 km)</td><td class="price-val">416 Kč</td><td class="price-note">Klášterec n. O., Kadaň.</td></tr>
+            <tr><td>Okresní (do 35 km)</td><td class="price-val">930 Kč</td><td class="price-note">Chomutov, Ostrov a okolí.</td></tr>
+            <tr><td>Regionální (do 65 km)</td><td class="price-val">1 760 Kč</td><td class="price-note">Regionální muzea — KV, Most, Žatec.</td></tr>
+            <tr><td>Vzdálené výjezdy (&gt;65 km)</td><td class="price-val">16 Kč / km</td><td class="price-note">Celková trasa tam i zpět.</td></tr>
+          </tbody></table>
+          <p class="price-footnote">Minimální fakturace 2 500 Kč / zakázka. <a href="cenotvorba.html" style="color: var(--c-blue);">Jak vzniká cena?</a></p>
         </div>
       </details>
     </div>
@@ -219,5 +162,31 @@
   </div>
 </footer>
 
+<script>
+  // Hamburger menu
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Zavřít po kliknutí na odkaz
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Zavřít při resize nad 680px
+    window.addEventListener('resize', function(){
+      if (window.innerWidth > 680) {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

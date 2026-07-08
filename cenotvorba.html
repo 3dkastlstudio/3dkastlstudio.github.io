@@ -28,6 +28,9 @@
       <a href="cenotvorba.html" class="active">Cenotvorba</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="laser-rail"><div class="dot"></div></div>
 </header>
@@ -91,27 +94,26 @@
         a do ceny započítávám i čas strávený na cestě, kdy nemohu pracovat u sebe ve studiu na jiných zakázkách.
       </p>
 
-      <div style="height: 32px;"></div>
-      <div style="height: 1.5px; background: linear-gradient(90deg, transparent, var(--c-blue), transparent); margin-bottom: 40px;"></div>
+      <div style="height: 1.5px; background: linear-gradient(90deg, transparent, var(--c-blue), transparent); margin: 40px 0;"></div>
 
       <h2 style="font-size: 20px; color: var(--c-ink); margin: 0 0 12px;">Vyberte si ceník pro váš projekt:</h2>
-      <p style="font-size: 15px; color: var(--c-ink-soft); margin-bottom: 0;">
+      <p style="font-size: 15px; color: var(--c-ink-soft); margin-bottom: 0; text-align: justify;">
         Každý segment má svůj vlastní ceník přizpůsobený povaze zakázky — klikněte na ten, který vám sedí nejlépe.
       </p>
 
       <div class="pricing-nav">
         <a href="b2b-vyroba.html#cenik" class="pricing-nav-card">
-          <span class="pnc-label">B2B & Výroba</span>
+          <span class="pnc-label">B2B &amp; Výroba</span>
           <span class="pnc-title">Průmysl a výroba</span>
           <span class="pnc-desc">Skenování, reverzní inženýrství a tisk náhradních dílů.</span>
         </a>
         <a href="historie-kultura.html#cenik" class="pricing-nav-card">
-          <span class="pnc-label">Historie & Kultura</span>
+          <span class="pnc-label">Historie &amp; Kultura</span>
           <span class="pnc-title">Muzea a památky</span>
           <span class="pnc-desc">Digitalizace artefaktů, repliky a haptické exponáty.</span>
         </a>
         <a href="domacnost-hobby.html#cenik" class="pricing-nav-card">
-          <span class="pnc-label">Domácnost & Hobby</span>
+          <span class="pnc-label">Domácnost &amp; Hobby</span>
           <span class="pnc-title">Veřejnost a hobby</span>
           <span class="pnc-desc">Náhradní díly, návrhové projekty a zakázky na míru.</span>
         </a>
@@ -137,5 +139,31 @@
   </div>
 </footer>
 
+<script>
+  // Hamburger menu
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Zavřít po kliknutí na odkaz
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Zavřít při resize nad 680px
+    window.addEventListener('resize', function(){
+      if (window.innerWidth > 680) {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

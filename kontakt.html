@@ -13,7 +13,7 @@
     <a href="index.html" class="brand">
       <img src="assets/VSUDE_logo_13.svg" alt="3D Kastl Studio">
       <div class="brand-text">
-        <span class="brand-3d-kastl">3D KASTL</span>
+        <span class="3D kastl">3D KASTL</span>
         <div class="divider"></div>
         <span class="studio">STUDIO</span>
       </div>
@@ -24,9 +24,11 @@
       <a href="b2b-vyroba.html">B2B &amp; Výroba</a>
       <a href="historie-kultura.html">Historie &amp; Kultura</a>
       <a href="domacnost-hobby.html">Domácnost &amp; Hobby</a>
-      <a href="cenotvorba.html">Cenotvorba</a>
       <a href="kontakt.html" class="active">Kontakt</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="laser-rail"><div class="dot"></div></div>
 </header>
@@ -43,7 +45,18 @@
   <section class="block tight">
     <div class="wrap" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; padding-left: 40px; align-items: start;">
 
-      <form class="contact-form" onsubmit="return false;">
+      <!-- ============================================================
+           KONTAKTNÍ FORMULÁŘ — napojený přes Web3Forms
+           Před spuštěním webu:
+           1. Jdi na https://web3forms.com
+           2. Zadej e-mail 3dkastlstudio@gmail.com a získej API klíč
+           3. Nahraď "VAS-API-KLIC-ZDE" níže svým klíčem
+      ============================================================ -->
+      <form class="contact-form" id="contact-form">
+        <input type="hidden" name="access_key" value="VAS-API-KLIC-ZDE">
+        <input type="hidden" name="subject" value="Nová poptávka — 3D Kastl Studio">
+        <input type="hidden" name="from_name" value="3D Kastl Studio web">
+        <input type="checkbox" name="botcheck" style="display:none;">
         <div class="form-row">
           <label for="name">Jméno a příjmení</label>
           <input type="text" id="name" name="name" placeholder="Jan Novák" required>
@@ -56,8 +69,28 @@
           <label for="message">Popis případu</label>
           <textarea id="message" name="message" rows="6" placeholder="Stručně popište díl, exponát nebo nápad, který potřebujete vyřešit…" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Odeslat poptávku</button>
+        <p id="form-success" style="display:none; margin-top:16px; color:#2a7a4a; font-size:14.5px; font-weight:600;">✓ Zpráva odeslána! Ozvu se do 24 hodin.</p>
+        <p id="form-error" style="display:none; margin-top:16px; color:#b03030; font-size:14.5px;">Něco se nepovedlo. Zkuste to znovu nebo napište přímo na <a href="mailto:3dkastlstudio@gmail.com">3dkastlstudio@gmail.com</a>.</p>
       </form>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = document.getElementById('submit-btn');
+          const ok  = document.getElementById('form-success');
+          const err = document.getElementById('form-error');
+          btn.disabled = true; btn.textContent = 'Odesílám…';
+          ok.style.display = 'none'; err.style.display = 'none';
+          try {
+            const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+            const data = await res.json();
+            if (data.success) { ok.style.display = 'block'; this.reset(); }
+            else { err.style.display = 'block'; }
+          } catch { err.style.display = 'block'; }
+          btn.disabled = false; btn.textContent = 'Odeslat poptávku';
+        });
+      </script>
+      <!-- KONEC KONTAKTNÍ FORMULÁŘ -->
 
       <div class="contact-info">
         <div class="item">
@@ -117,7 +150,7 @@
           QR kód otevře vizitku 3D Kastl Studio, kterou si telefon nabídne rovnou uložit mezi kontakty —
           žádná aplikace ani registrace není potřeba.
         </p>
-        <a href="assets/3Dkastl-studio.vcf" download class="btn btn-secondary">Stáhnout vizitku (.vcf)</a>
+        <a href="assets/kastl-studio.vcf" download class="btn btn-secondary">Stáhnout vizitku (.vcf)</a>
       </div>
       <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
         <img src="assets/KONTAKT_qrVizitka_14.png" alt="QR kód pro stažení digitální vizitky 3D Kastl Studio" style="width:160px; height:160px; border: 0.5px solid var(--c-line); border-radius: var(--radius); padding: 12px; background:var(--c-paper);">      </div>
@@ -147,5 +180,31 @@
   </div>
 </footer>
 
+<script>
+  // Hamburger menu
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Zavřít po kliknutí na odkaz
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Zavřít při resize nad 680px
+    window.addEventListener('resize', function(){
+      if (window.innerWidth > 680) {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
